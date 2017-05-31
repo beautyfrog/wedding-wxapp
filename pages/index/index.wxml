@@ -1,0 +1,14 @@
+<view class="img">
+  <image mode="aspectFit" style="width:{{bgW}}px; height:{{bgH}}px;" src="../../resources/background.jpg"></image>
+</view>
+<view class="bottom">
+  <a href="#" bindtap="openModal"></a>
+</view>
+<view class="modalBg" style="display: {{modelShow}}; z-index: {{modalZindex}};"></view>
+<view class="modalWin" style="display: {{modelShow}}; z-index: {{modalZindex+1}};">
+  <form bindsubmit="sendDanmu" bindreset="closeModal">
+    <textarea name="danmu" value="{{danmu}}" placeholder="想对我们说些什么呢" maxlength="128" auto-height/>
+    <button type="primary" formType="submit">发个弹幕</button>
+    <button type="default" formType="reset">想想再说</button>
+  </form>
+</view>
