@@ -1,13 +1,12 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/index/index"
   ],
   "window":{
     "backgroundColor": "#edf6f1",
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#edf6f1",
-    "navigationBarTitleText": "我们的婚礼",
+    "navigationBarTitleText": "李斌and梁洁的婚礼弹弹Show",
     "navigationBarTextStyle":"black"
   }
 }

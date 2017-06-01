@@ -60,9 +60,10 @@ page {
   height: auto;
 }
 
-.modalWin textarea {
+.modalWin input {
   border: 1px #000 solid;
   width: 100%;
+  min-height: 150px;
   max-height: 400px;
   margin-bottom: 5px;
 }

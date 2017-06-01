@@ -7,8 +7,8 @@
 <view class="modalBg" style="display: {{modelShow}}; z-index: {{modalZindex}};"></view>
 <view class="modalWin" style="display: {{modelShow}}; z-index: {{modalZindex+1}};">
   <form bindsubmit="sendDanmu" bindreset="closeModal">
-    <textarea name="danmu" value="{{danmu}}" placeholder="想对我们说些什么呢" maxlength="128" auto-height/>
-    <button type="primary" formType="submit">发个弹幕</button>
-    <button type="default" formType="reset">想想再说</button>
+    <input name="danmu" value="{{danmu}}" placeholder="你想对我们说些什么呢" maxlength="128" auto-height/>
+    <button type="primary" formType="submit">走你</button>
+    <button type="default" formType="reset">再想一会</button>
   </form>
 </view>

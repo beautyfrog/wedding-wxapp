@@ -41,30 +41,42 @@ Page({
   },
   // 发送弹幕
   sendDanmu: function (event){
-    var _page = this;
-    console.log(_page.data.danmu);
+    var $this = this;
+    var data = event.detail.value;
+    if(data.danmu==""){
+      return;
+    }else{
+      // 客人信息
+      data["firend"] = $this.data.userInfo.nickName;
+      data["avatar"] = $this.data.userInfo.avatarUrl;
+    }
+    // 显示发送状态
+    wx.showToast({
+      title: '弹幕正在发射',
+      icon: "loading"
+    })
+    // 发送
     wx.request({
       url: "https://21077212.qcloud.la/pop",
       method: "post",
-      data: event.detail.value,
+      data: data,
       header: {
         'content-type': 'application/x-www-form-urlencoded'
       },
       success: function (res) {
-        // 清除术
-        _page.setData({
+        wx.hideLoading()
+        $this.setData({
           danmu : ""
         });
-        //关闭窗口
-        _page.closeModal();
         //提示消息
         wx.showToast({
           title: '发送成功',
           icon: "success"
         })
       },
-      fail: function(){
-        console.log("发送失败了")
+      complete: function(){
+        //关闭窗口
+        $this.closeModal();
       }
     })
   }
