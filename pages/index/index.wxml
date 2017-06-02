@@ -1,5 +1,5 @@
 <view class="img">
-  <image mode="aspectFit" style="width:{{bgW}}px; height:{{bgH}}px;" src="../../resources/background.jpg"></image>
+  <image mode="aspectFit" style="width:{{bgW}}px; height:{{bgH}}px;" src="../../resources/bg.jpg"></image>
 </view>
 <view class="bottom">
   <a href="#" bindtap="openModal"></a>
@@ -7,8 +7,8 @@
 <view class="modalBg" style="display: {{modelShow}}; z-index: {{modalZindex}};"></view>
 <view class="modalWin" style="display: {{modelShow}}; z-index: {{modalZindex+1}};">
   <form bindsubmit="sendDanmu" bindreset="closeModal">
-    <input name="danmu" value="{{danmu}}" placeholder="你想对我们说些什么呢" maxlength="128" auto-height/>
-    <button type="primary" formType="submit">走你</button>
-    <button type="default" formType="reset">再想一会</button>
+    <textarea name="danmu" value="{{danmu}}" placeholder="你想对我们说些什么呢，三十个字内哦" placeholder-style="margin-top:10px;" maxlength="128"/>
+    <button type="primary" formType="submit" class="primary">走你</button>
+    <button type="default" formType="reset" class="default">再想一会</button>
   </form>
 </view>

@@ -43,7 +43,8 @@ Page({
   sendDanmu: function (event){
     var $this = this;
     var data = event.detail.value;
-    if(data.danmu==""){
+    if(data.danmu==""
+      || data.danmu.length > 30){
       return;
     }else{
       // 客人信息
@@ -75,7 +76,6 @@ Page({
         })
       },
       complete: function(){
-        //关闭窗口
         $this.closeModal();
       }
     })
